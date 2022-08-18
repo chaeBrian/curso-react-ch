@@ -1,0 +1,33 @@
+.stylesNavbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+}
+.stylesNavbar span{
+    width: 40%;
+    text-align: center;
+}
+.stylesNavbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+.stylesNavbar li{
+    list-style: none;
+    margin: 1vw;
+}
+.stylesNavbar ul li a{
+    text-decoration-line: none;
+    transition: all 1s ease;
+}
+.stylesNavbar ul li a:visited{
+    color: black;
+}
+.stylesNavbar ul li a:hover{
+    color: rgb(155, 68, 255);
+    transition: all 1s ease;
+}
