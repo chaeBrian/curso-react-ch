@@ -1,9 +1,31 @@
-import React from 'react';
-import './itemListContainer.css'
+import React, {useEffect, useState} from 'react';
+import './itemListContainer.css';
+import ItemList from './ItemList/ItemList';
+import { Products } from '../Mock/Products';
 
 const ItemListContainer = (props) => {
+  
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+      const getProducts = new Promise((res) => {
+          setTimeout(() => {
+              res(Products);
+          }, 2000);
+      });
+
+      getProducts
+          .then((data) => {
+              setItems(data);
+          });
+  },
+  []); 
+
   return (
-    <main className='itemListContainer'>{props.saludo}</main>
+    <div className='itemListContainer'>
+        <main className='itemListContainer__saludo'>{props.saludo}</main>
+        <ItemList items={items}/>
+    </div>
   )
 }
 

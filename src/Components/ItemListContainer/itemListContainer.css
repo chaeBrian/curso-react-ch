@@ -1,4 +1,10 @@
 .itemListContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.itemListContainer__saludo{
     text-align: center;
     margin: 2vh 0;
     padding: 5vh;
