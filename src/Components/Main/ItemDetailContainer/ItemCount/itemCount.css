@@ -3,44 +3,54 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgb(62, 62, 62);
     border-radius: 5px;
-    width: 12%;
-    margin: auto;
+    width: 8vw !important;
+    height: 20%;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+                -15px -15px 30px #ffffff;
 }
 .itemCount__addCart{
     border: none;
-    font-size: medium;
-    padding: 7px;
+    font-size: small;
+    font-weight: bold;
+    padding: 7px 15px;
     cursor: pointer;
-    border-top: 1px solid rgb(62, 62, 62);
+    border-top: 1px solid rgba(62, 62, 62, 0.364);
     transition: 0.5s ease;
+    background-color: rgba(255, 255, 255, 0);
 }
 .itemCount__addCart:hover{
     color: rgb(146, 146, 146);
     transition: 0.5s ease;
 }
-.itemCount div{
+.itemCount__div{
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .itemCount span{
     display: flex;
+    padding: 0 !important;
     flex-direction: column;
-    border-right: 1px solid rgb(62, 62, 62);
-    width: 4vw;
-    margin-top: 10px;
+    border-right: 1px solid rgba(62, 62, 62, 0.364);
+    width: 40px;
+    margin: 10px 0 0 10px;
 }
 .itemCount span button:last-of-type{
-    border-top: 1px solid rgb(62, 62, 62);
+    border-top: 1px solid rgba(62, 62, 62, 0.364);
+    font-size: 3.5vh;
+    background-color: rgba(0, 0, 0, 0);
 }
 .itemCount span button{
     border: none;
     font-size: 6vh;
     cursor: pointer;
     transition: 0.5s ease;
+    font-size: 3.5vh;
+    background-color: rgba(0, 0, 0, 0);
 }
 .itemCount span button:hover{
     color: rgb(146, 146, 146);
@@ -48,6 +58,6 @@
 }
 .itemCount p{
     text-align: center;
-    font-size: 8vh;
-    width: 6vw;
+    font-size: 4vh;
+    width: 50%;
 }

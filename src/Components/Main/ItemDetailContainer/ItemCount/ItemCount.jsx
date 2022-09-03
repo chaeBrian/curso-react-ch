@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import "./itemCount.css";
+import {RiShoppingCart2Line} from 'react-icons/ri'
 
 export const ItemCount = ({stock, initial, onAdd}) => {
 
@@ -14,14 +15,14 @@ export const ItemCount = ({stock, initial, onAdd}) => {
 
     return (
     <div className='itemCount'>
-        <div>
+        <div className='itemCount__div'>
             <span>
                 <button onClick={sumar}>+</button>
                 <button onClick={restar}>-</button>
             </span>
             <p>{count}</p>
         </div>
-        <button className='itemCount__addCart' onClick={onAdd}>Agregar al carrito</button>
+        <button className='itemCount__addCart' onClick={onAdd}>Add to <RiShoppingCart2Line /></button>
     </div>
   )
 }

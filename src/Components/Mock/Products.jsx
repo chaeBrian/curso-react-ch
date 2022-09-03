@@ -1,3 +1,4 @@
+
 export const Products = [
   {
     id: 1,
@@ -12,9 +13,11 @@ export const Products = [
     id: 2,
         title: 'Argentina Away Jersey',
         description: 'player Jersey',
+        color: 'Legacy Indigo / Purple Rush',
+        discount: 'This product is excluded from all promotional discounts and offers.',
         price: 50,
         stock: 10,
-        category: 'Men Football',
+        category: 'New | Men | Football',
         img: 'https://res.cloudinary.com/dr2vstkz6/image/upload/v1661884336/id2_jersey_argentina_tjrgzn.webp'
   },
   {
