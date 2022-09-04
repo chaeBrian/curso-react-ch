@@ -1,9 +1,14 @@
 import React from 'react'
 import ItemListContainer from './ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer';
+import './main.css'
 
 const Main = () => {
   return (
-    <ItemListContainer  saludo='Bienvenido'/>
+    <main className='main'>
+      <ItemListContainer  saludo='Bienvenido'/>
+      <ItemDetailContainer />
+    </main>
   )
 };
 

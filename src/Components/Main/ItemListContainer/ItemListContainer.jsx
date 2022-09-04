@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import './itemListContainer.css';
 import ItemList from './ItemList/ItemList';
 import { Products } from '../../Mock/Products';
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 const ItemListContainer = (props) => {
   
@@ -24,11 +23,10 @@ const ItemListContainer = (props) => {
   []); 
 
   return (
-    <main className='itemListContainer'>
+    <div className='itemListContainer'>
         <div className='itemListContainer__saludo'>{props.saludo}</div>
         <ItemList items={items}/>
-        <ItemDetailContainer />
-    </main>
+    </div>
   )
 }
 
