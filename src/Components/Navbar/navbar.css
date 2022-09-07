@@ -5,12 +5,12 @@
     align-items: center;
     height: 6vh;
 }
-.stylesNavbar a{
+.stylesNavbar__home{
     text-align: center;
     text-decoration: none;
     width: 40%;
 }
-.stylesNavbar a:visited{
+.stylesNavbar__home:visited{
     color: black;
 }
 .stylesNavbar ul li a span{
@@ -27,14 +27,17 @@
     list-style: none;
     margin: 1vw;
 }
-.stylesNavbar ul li a{
+.stylesNavbar__ul-link{
+    color: black;
+}
+.stylesNavbar__ul-link{
     text-decoration-line: none;
     transition: all 1s ease;
 }
-.stylesNavbar ul li a:visited{
+.stylesNavbar__ul-link:visited{
     color: black;
 }
-.stylesNavbar ul li a:hover{
+.stylesNavbar__ul-link:hover{
     color: rgb(148, 55, 254);
     transition: all 1s ease;
 }
