@@ -7,7 +7,7 @@ export const Products = [
         color: 'White',
         discount: 'This product is excluded from all promotional discounts and offers.',
         price: 50,
-        stock: 10,
+        stock: 8,
         category: 'home-jerseys',
         img: 'https://res.cloudinary.com/dr2vstkz6/image/upload/v1661884336/id1_jersey_germany_ew7gqa.webp'
   },
@@ -18,7 +18,7 @@ export const Products = [
         color: 'Legacy Indigo / Purple Rush',
         discount: 'This product is excluded from all promotional discounts and offers.',
         price: 50,
-        stock: 10,
+        stock: 6,
         category: 'away-jerseys',
         img: 'https://res.cloudinary.com/dr2vstkz6/image/upload/v1661884336/id2_jersey_argentina_tjrgzn.webp'
   },
@@ -29,7 +29,7 @@ export const Products = [
         color: 'Red / Navy Blue',
         discount: 'This product is excluded from all promotional discounts and offers.',
         price: 50,
-        stock: 10,
+        stock: 4,
         category: 'home-jerseys',
         img: 'https://res.cloudinary.com/dr2vstkz6/image/upload/v1661884336/id3_jersey_spain_p7zf3q.webp'
   },
@@ -51,7 +51,7 @@ export const Products = [
         color: 'Blue',
         discount: 'This product is excluded from all promotional discounts and offers.',
         price: 50,
-        stock: 10,
+        stock: 8,
         category: 'home-jerseys',
         img: 'https://res.cloudinary.com/dr2vstkz6/image/upload/v1662518707/id5_jersey_japan_ui26gt.webp'
   },
@@ -62,7 +62,7 @@ export const Products = [
         color: 'White',
         discount: 'This product is excluded from all promotional discounts and offers.',
         price: 50,
-        stock: 10,
+        stock: 6,
         category: 'away-jerseys',
         img: 'https://res.cloudinary.com/dr2vstkz6/image/upload/v1662518707/id6_jersey_bosnia_e559s2.webp'
   }

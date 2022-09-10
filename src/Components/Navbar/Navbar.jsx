@@ -19,7 +19,7 @@ const Navbar = () => {
                 </Link>
               </li>
             <li>
-              <Link className='stylesNavbar__ul-link' to='/category/cart'>
+              <Link className='stylesNavbar__ul-link' to='/cart'>
                 <CartWidget />
                 </Link>
               </li>

@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    width: 22%;
+    width: 19vw;
     padding-bottom: 20px;
     margin: 15px;
     border-radius: 30px;
@@ -11,10 +11,13 @@
     box-shadow: 15px 15px 30px #bebebe,
                 -15px -15px 30px #ffffff;
     text-decoration: none;
+    border: 0.5px solid rgba(0, 0, 0, 0);
+    transition: 0.5s ease;
 }
 .item:hover{
     cursor: pointer;
-    border: 0.5px solid rgba(0, 0, 0, 0.132);
+    border: 0.5px solid rgb(181, 180, 180);
+    transition: 0.5s ease;
 }
 .item img{
     width: 100%;

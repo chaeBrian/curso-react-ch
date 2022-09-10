@@ -22,7 +22,7 @@ export const ItemCount = ({stock, initial, onAdd}) => {
             </span>
             <p>{count}</p>
         </div>
-        <button className='itemCount__addCart' onClick={onAdd}>Add to <RiShoppingCart2Line /></button>
+        <button className='itemCount__addCart' onClick={() => onAdd(count)}>Add to <RiShoppingCart2Line /></button>
     </div>
   )
 }

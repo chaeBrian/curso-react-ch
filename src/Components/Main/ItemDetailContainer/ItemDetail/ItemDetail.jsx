@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import './itemDetail.css';
+import {RiShoppingCart2Line} from 'react-icons/ri'
 
 const ItemDetail = ({item}) => {
-   const onAdd = () => {
-        console.log('* Agregado al carrito');
+  
+   const [cantidad, setCantidad] = useState(0);
+
+   const onAdd = (cantidad) => {
+        setCantidad(cantidad);
     };
   return (
     <div className='itemDetail'>
@@ -15,7 +20,9 @@ const ItemDetail = ({item}) => {
             <p>${item.price}</p>
             <p>{item.color}</p>
             <span>{item.discount}</span>
-            <ItemCount stock={10} initial={1} onAdd={onAdd}/>
+            {cantidad === 0 
+              ? (<ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>)
+              : (<Link className='toCart' to='/category/cart'>GO TO <RiShoppingCart2Line /></Link>)}
         </div>
     </div>
   )
