@@ -1,15 +1,20 @@
-import React, {useState} from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../../../Context/CartContext';
 import ItemCount from '../ItemCount/ItemCount';
+
+//Stylesheet
 import './itemDetail.css';
 import {RiShoppingCart2Line} from 'react-icons/ri'
 
 const ItemDetail = ({item}) => {
   
    const [cantidad, setCantidad] = useState(0);
+   const { addItem } = useContext(CartContext);
 
-   const onAdd = (cantidad) => {
-        setCantidad(cantidad);
+   const onAdd = (quantity) => {
+        setCantidad(quantity);
+        addItem( item, quantity)
     };
   return (
     <div className='itemDetail'>
