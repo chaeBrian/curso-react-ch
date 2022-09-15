@@ -39,7 +39,7 @@ const CartProvider = ({children}) => {
 
     const removeItem = (id) => {
         console.log(`${id}: ha sido eliminado`)
-        const filterCart = cart.filter((prod) => prod.id === id);
+        const filterCart = cart.filter((prod) => prod.id !== id);
         setCart(filterCart)
     };
 

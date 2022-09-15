@@ -27,7 +27,7 @@ const ItemDetail = ({item}) => {
             <span>{item.discount}</span>
             {cantidad === 0 
               ? (<ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>)
-              : (<Link className='toCart' to='/category/cart'>GO TO <RiShoppingCart2Line /></Link>)}
+              : (<Link className='toCart' to='/cart'>GO TO <RiShoppingCart2Line /></Link>)}
         </div>
     </div>
   )
