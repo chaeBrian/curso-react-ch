@@ -5,10 +5,21 @@
     align-items: center;
 }
 .itemListContainer__saludo{
-    text-align: center;
-    margin: 2vh 0;
-    padding: 3vh;
-    font-size: 10vh;
-    font-style: italic;
-    text-decoration: underline 4vh solid rgb(62, 62, 62);
+    padding: 2vh;
+    font-size: 2vh;
+    font-weight: 700;
+}
+.spinner{
+    height: 100px;
+    width: 100px;
+    background-image: url(https://res.cloudinary.com/dr2vstkz6/image/upload/v1663266485/qatar-png_blvhcp.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 200px;
+    animation: fade 3s ease infinite;
+}
+  
+@keyframes fade {
+    0%,100% {opacity: 0.3;}
+    50% {opacity: 1;}
 }

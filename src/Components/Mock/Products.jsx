@@ -1,4 +1,3 @@
-
 export const Products = [
   {
     id: '1',
@@ -65,5 +64,27 @@ export const Products = [
         stock: 6,
         category: 'away-jerseys',
         img: 'https://res.cloudinary.com/dr2vstkz6/image/upload/v1662518707/id6_jersey_bosnia_e559s2.webp'
+  },
+  {
+    id: '7',
+        title: 'France Away Jersey',
+        description: 'New | Men | Football',
+        color: 'White',
+        discount: 'This product is excluded from all promotional discounts and offers.',
+        price: 50,
+        stock: 15,
+        category: 'away-jerseys',
+        img: 'https://res.cloudinary.com/dr2vstkz6/image/upload/v1663358459/id7_jersey_france_yeepop.webp'
+  },
+  {
+    id: '8',
+        title: 'France Home Jersey',
+        description: 'New | Men | Football',
+        color: 'Navy Blue',
+        discount: 'This product is excluded from all promotional discounts and offers.',
+        price: 50,
+        stock: 11,
+        category: 'home-jerseys',
+        img: 'https://res.cloudinary.com/dr2vstkz6/image/upload/v1663359169/id8_jersey_france_2_jqaey5.webp'
   }
 ];

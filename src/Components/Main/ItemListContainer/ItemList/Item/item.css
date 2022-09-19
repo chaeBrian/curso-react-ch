@@ -7,17 +7,29 @@
     padding-bottom: 20px;
     margin: 15px;
     border-radius: 30px;
-    background: #e0e0e0;
+    background-color: #eceff1;
+    transition: 1s ease;
     box-shadow: 15px 15px 30px #bebebe,
                 -15px -15px 30px #ffffff;
     text-decoration: none;
-    border: 0.5px solid rgba(0, 0, 0, 0);
-    transition: 0.5s ease;
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+@keyframes slideUp {
+    0%, 5% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    90%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 .item:hover{
     cursor: pointer;
-    border: 0.5px solid rgb(181, 180, 180);
-    transition: 0.5s ease;
+    background-color: rgb(255, 255, 255);
+    transition: 1s ease;
 }
 .item img{
     width: 100%;

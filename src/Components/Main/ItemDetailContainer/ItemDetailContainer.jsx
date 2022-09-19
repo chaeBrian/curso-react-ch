@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import ItemDetail from './ItemDetail/ItemDetail';
 import { Products } from '../../Mock/Products';
 import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
-import { useState } from 'react';
 
 const ItemDetailContainer = () => {
   
   const [item, setItem] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(true);
   const {id} = useParams();
 
   useEffect(() =>{
@@ -18,19 +16,30 @@ const ItemDetailContainer = () => {
             (prod) => prod.id === id)
           setTimeout(() => {
               res(unProducto)
-          }, 100);
+          }, 1000);
         })
         getProduct()
           .then((data) =>{
             setItem(data)
+            setIsLoading(false);
           })
           .catch((error) =>{
             console.log(error)
           })
+
+        return(
+              setIsLoading(true)
+        )
   },[id]);
 
   return (
-      <ItemDetail item={item}/>
+      <div>
+        {
+          isLoading
+          ?   <div className='spinner'></div>
+          :   <ItemDetail item={item}/>
+        }
+      </div>
   )
 };
 

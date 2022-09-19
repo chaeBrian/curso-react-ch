@@ -1,21 +1,22 @@
 import React from 'react';
-import './navbar.css';
 import CartWidget from './CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
+//Stylesheet
+import './navbar.css';
 
 const Navbar = () => {
   return (
     <div className='stylesNavbar'>
-        <Link className='stylesNavbar__home' to='/'>E-COMMERCE</Link>
+        <Link className='stylesNavbar__home' to='/'>WORLD CUP JERSEYS</Link>
         <ul>
             <li>
               <Link className='stylesNavbar__ul-link' to='/category/home-jerseys'>
-                Home Jerseys
+                home jerseys
                 </Link>
               </li>
             <li>
               <Link className='stylesNavbar__ul-link' to='/category/away-jerseys'>
-                Away Jerseys
+                away jerseys
                 </Link>
               </li>
             <li>

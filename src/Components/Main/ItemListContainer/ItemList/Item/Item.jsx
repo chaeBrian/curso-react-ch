@@ -1,6 +1,7 @@
 import React from 'react';
-import './item.css';
 import { Link } from 'react-router-dom';
+//Stylesheet
+import './item.css';
 
 export const Item = ({item}) => {
   return (

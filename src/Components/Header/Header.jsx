@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
+//Stylesheet
 import './header.css';
 
 const Header = () => {

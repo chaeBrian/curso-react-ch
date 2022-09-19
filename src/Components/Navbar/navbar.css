@@ -3,15 +3,21 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    height: 6vh;
 }
 .stylesNavbar__home{
+    color: black;
+    font-weight: 700;
     text-align: center;
     text-decoration: none;
     width: 40%;
+    transition: all 0.5s ease;
 }
 .stylesNavbar__home:visited{
     color: black;
+}
+.stylesNavbar__home:hover{
+    color: rgba(197, 65, 91, 0.609) ;
+    transition: all 0.5s ease;
 }
 .stylesNavbar ul li a span{
     padding: 0 5vw;
@@ -29,15 +35,18 @@
 }
 .stylesNavbar__ul-link{
     color: black;
-}
-.stylesNavbar__ul-link{
+    font-weight: 600;
     text-decoration-line: none;
     transition: all 0.5s ease;
+    margin: 0 5px;
 }
 .stylesNavbar__ul-link:visited{
     color: black;
 }
 .stylesNavbar__ul-link:hover{
-    color: #8badfd;
+    color: #bebebe;
     transition: all 0.5s ease;
+}
+.stylesNavbar li:last-of-type{
+    height: 30px;
 }

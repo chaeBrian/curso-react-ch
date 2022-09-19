@@ -1,16 +1,21 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {TbShirt} from 'react-icons/tb';
+//Stylesheet
 import "./itemCount.css";
-import {RiShoppingCart2Line} from 'react-icons/ri'
 
-export const ItemCount = ({stock, initial, onAdd}) => {
+export const ItemCount = ({stock, onAdd, initial = 1}) => {
 
     const [count, setCount] = useState(initial);
+
+    useEffect( () =>{
+        setCount(initial)
+    },[initial])
     
     const sumar = () => {
-        count < stock && setCount(count + initial);
+        count < stock && setCount(count + 1);
     };
     const restar = () => {
-        count > 1 && setCount(count - initial);
+        count > 1 && setCount(count - 1);
     };
 
     return (
@@ -22,7 +27,7 @@ export const ItemCount = ({stock, initial, onAdd}) => {
             </span>
             <p>{count}</p>
         </div>
-        <button className='itemCount__addCart' onClick={() => onAdd(count)}>Add to <RiShoppingCart2Line /></button>
+        <button className='itemCount__addCart' onClick={() => onAdd(count)}>Add to <TbShirt /></button>
     </div>
   )
 }

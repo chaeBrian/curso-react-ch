@@ -1,6 +1,5 @@
 .header{
     width: 100%;
     border-bottom: 1px solid transparent;
-    border-image: linear-gradient(0.25turn, rgb(241, 241, 241), rgb(81, 81, 81), rgb(241, 241, 241));
     border-image-slice: 1;
 }

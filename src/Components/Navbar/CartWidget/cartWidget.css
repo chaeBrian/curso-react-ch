@@ -1,0 +1,16 @@
+.cartWidget{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: -16px;
+}
+.cartWidget span{
+    padding: 0 !important;
+    font-size: large;
+    margin-left: 0;
+}
+.cartWidget p{
+    font-size: normal;
+    font-weight: 500;
+    margin-top: -1px;
+}
