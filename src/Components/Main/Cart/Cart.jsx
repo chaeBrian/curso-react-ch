@@ -38,6 +38,7 @@ const Cart = () => {
                         </span>
                     </button>
                 </div>
+                <div className='cartContainer__childContainer'>
                   {
                       cart.map((prod) =>(
                           <div key={prod.id} className='cartContainer__child-prods'>
@@ -60,6 +61,7 @@ const Cart = () => {
                           </div>
                       ))
                   }
+                </div>
               </div>
               <div className='cartContainer__totalPrice'>
                 <div></div>

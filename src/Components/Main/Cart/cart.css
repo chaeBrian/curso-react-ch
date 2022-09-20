@@ -54,6 +54,7 @@
     box-shadow: 15px 15px 30px #bebebe,
                 -15px -15px 30px #ffffff;
     width: 90%;
+    height: 550px;
 }
 .cartContainer__child{
     display: flex;
@@ -75,6 +76,10 @@
     margin-left: 10px;
     font-weight: bold;
     align-self: center;
+}
+.cartContainer__childContainer{
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .cartContainer__child-prods{
     display: flex;

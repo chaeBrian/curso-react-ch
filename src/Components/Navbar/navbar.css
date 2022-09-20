@@ -1,7 +1,7 @@
 .stylesNavbar{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 .stylesNavbar__home{
@@ -9,14 +9,14 @@
     font-weight: 700;
     text-align: center;
     text-decoration: none;
-    width: 40%;
     transition: all 0.5s ease;
+    margin-left: 15rem;
 }
 .stylesNavbar__home:visited{
     color: black;
 }
 .stylesNavbar__home:hover{
-    color: rgba(197, 65, 91, 0.609) ;
+    color: rgb(166, 166, 166);
     transition: all 0.5s ease;
 }
 .stylesNavbar ul li a span{
