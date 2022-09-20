@@ -1,5 +1,6 @@
 .itemDetail{
-    width: 75%;
+    width: 95%;
+    height: 550px;
     display: flex;
     flex-direction: row;
     border-top-left-radius: 30px;
@@ -11,6 +12,7 @@
     animation-name: slideUp;
     animation-duration: 1s;
     animation-timing-function: ease;
+    user-select: none;
 }
 @keyframes slideUp {
     0%, 5% {

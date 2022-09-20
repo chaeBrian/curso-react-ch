@@ -15,6 +15,7 @@
     animation-name: slideUp;
     animation-duration: 1s;
     animation-timing-function: ease;
+    user-select: none;
 }
 @keyframes slideUp {
     0%, 5% {
