@@ -1,7 +1,10 @@
 import React, { useEffect, useState} from 'react';
 import ItemDetail from './ItemDetail/ItemDetail';
-import { Products } from '../../Mock/Products';
+//import { Products } from '../../Mock/Products';
 import { useParams } from 'react-router-dom';
+//Firebase
+import { dataBase } from '../../../firebaseConfig/firebaseConfig';
+import { getDoc, doc, collection } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
   
@@ -10,26 +13,21 @@ const ItemDetailContainer = () => {
   const {id} = useParams();
 
   useEffect(() =>{
-    const getProduct = () =>
-        new Promise ((res, rej) => {
-          const unProducto = Products.find(
-            (prod) => prod.id === id)
-          setTimeout(() => {
-              res(unProducto)
-          }, 1000);
-        })
-        getProduct()
-          .then((data) =>{
-            setItem(data)
-            setIsLoading(false);
-          })
-          .catch((error) =>{
-            console.log(error)
-          })
-
-        return(
-              setIsLoading(true)
-        )
+    setIsLoading(true)
+    const itemCollection = collection( dataBase, 'jerseys' );
+    const ref = doc(itemCollection, id);
+    getDoc(ref).then((res) => {
+      setItem({
+        id: res.id,
+        ...res.data()
+      });
+    })
+    .catch((error) =>{
+        console.log(error);
+    })
+    .finally(() =>{
+        setIsLoading(false);
+    })
   },[id]);
 
   return (
@@ -45,6 +43,27 @@ const ItemDetailContainer = () => {
 
 export default ItemDetailContainer;
 
+
+/* const getProduct = () =>
+new Promise ((res, rej) => {
+  const unProducto = Products.find(
+    (prod) => prod.id === id)
+  setTimeout(() => {
+      res(unProducto)
+  }, 1000);
+})
+getProduct()
+  .then((data) =>{
+    setItem(data)
+    setIsLoading(false);
+  })
+  .catch((error) =>{
+    console.log(error)
+  })
+
+return(
+      setIsLoading(true)
+) */
 
 //const id = useParams();
   

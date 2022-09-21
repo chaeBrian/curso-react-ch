@@ -7,16 +7,21 @@ import './navbar.css';
 const Navbar = () => {
   return (
     <div className='stylesNavbar'>
-        <Link className='stylesNavbar__home' to='/'>WORLD CUP JERSEYS</Link>
+        <Link className='stylesNavbar__home' to='/'>WORLD CUP SHIRTS</Link>
         <ul>
             <li>
-              <Link className='stylesNavbar__ul-link' to='/category/home-jerseys'>
-                home jerseys
+              <Link className='stylesNavbar__ul-link' to='/category/home-shirts'>
+                home shirts
                 </Link>
               </li>
             <li>
-              <Link className='stylesNavbar__ul-link' to='/category/away-jerseys'>
-                away jerseys
+              <Link className='stylesNavbar__ul-link' to='/category/away-shirts'>
+                away shirts
+                </Link>
+              </li>
+            <li>
+              <Link className='stylesNavbar__ul-link' to='/category/goalkeeper-shirts'>
+                goalkeeper shirts
                 </Link>
               </li>
             <li>

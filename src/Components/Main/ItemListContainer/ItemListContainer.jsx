@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import ItemList from './ItemList/ItemList';
-import { Products } from '../../Mock/Products';
+/* import { Products } from '../../Mock/Products'; */
 import { useParams } from 'react-router-dom';
 //Stylesheet
 import './itemListContainer.css';
+//Firebase
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { dataBase } from '../../../firebaseConfig/firebaseConfig';
 
 const ItemListContainer = (props) => {
   
@@ -14,26 +17,28 @@ const ItemListContainer = (props) => {
   const {id} = useParams()
 
   useEffect(() => {
-    const getProducts = () =>
-            new Promise((res, rej) => {
-            const filterProd = Products.filter(
-                (prod) => prod.category === id);
-            setTimeout(() => {
-                res(id ? filterProd : Products);
-            }, 1000);
+    setIsLoading(true);
+    const itemCollection = collection( dataBase, 'jerseys' );
+    const ref = id
+        ? query(itemCollection, where('category', '==', id))
+        : itemCollection;
+
+    getDocs( ref )
+    .then((res) => {
+        const shirts = res.docs.map((shirt) => {
+            return {
+                id: shirt.id,
+                ...shirt.data()
+            };
         });
-        getProducts()
-            .then((data) => {
-                setItems(data);
-                setIsLoading(false);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-        
-        return(
-            setIsLoading(true)
-        )
+        setItems(shirts)
+    })
+    .catch((error) =>{
+        console.log(error);
+    })
+    .finally(() =>{
+        setIsLoading(false);
+    })
   }, [id]);
 
   return (
@@ -49,5 +54,26 @@ const ItemListContainer = (props) => {
     </div>
   )
 };
+
+/* const getProducts = () =>
+new Promise((res, rej) => {
+const filterProd = Products.filter(
+    (prod) => prod.category === id);
+setTimeout(() => {
+    res(id ? filterProd : Products);
+}, 1000);
+});
+getProducts()
+.then((data) => {
+    setItems(data);
+    setIsLoading(false);
+})
+.catch((error) => {
+    console.log(error);
+});
+
+return(
+setIsLoading(true)
+) */
 
 export default ItemListContainer;

@@ -78,6 +78,7 @@
                 -15px -15px 30px #ffffff;
     width: 90%;
     height: 550px;
+    user-select: none;
 }
 .cartContainer__child{
     display: flex;
