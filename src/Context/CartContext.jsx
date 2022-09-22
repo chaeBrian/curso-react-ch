@@ -35,7 +35,7 @@ const CartProvider = ({children}) => {
 
     console.log(cart);
 
-    const removeItem = (id) => {
+    const removeShirt = (id) => {
         console.log(`${id}: ha sido eliminado`)
         const filterCart = cart.filter((prod) => prod.id !== id);
         setCart(filterCart)
@@ -71,7 +71,7 @@ const CartProvider = ({children}) => {
             value={{
                 cart,
                 addItem,
-                removeItem,
+                removeShirt,
                 clear,
                 quantitySave,
                 totalPrice,

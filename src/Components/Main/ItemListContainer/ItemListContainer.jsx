@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import './itemListContainer.css';
 //Firebase
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import { dataBase } from '../../../firebaseConfig/firebaseConfig';
+import { dataBase } from '../../../FirebaseConfig/FirebaseConfig';
 
 const ItemListContainer = (props) => {
   

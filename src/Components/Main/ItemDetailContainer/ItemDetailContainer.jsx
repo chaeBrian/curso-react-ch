@@ -3,7 +3,7 @@ import ItemDetail from './ItemDetail/ItemDetail';
 //import { Products } from '../../Mock/Products';
 import { useParams } from 'react-router-dom';
 //Firebase
-import { dataBase } from '../../../firebaseConfig/firebaseConfig';
+import { dataBase } from '../../../FirebaseConfig/FirebaseConfig';
 import { getDoc, doc, collection } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
