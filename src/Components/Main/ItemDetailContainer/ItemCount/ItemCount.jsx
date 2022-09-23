@@ -19,15 +19,15 @@ export const ItemCount = ({stock, onAdd, initial = 1}) => {
     };
 
     return (
-    <div className='itemCount'>
-        <div className='itemCount__div'>
-            <span>
+    <div className='-itemCount'>
+        <div className='_itemCount__bttnCtr'>
+            <span className='_bttnCrt-countCtr'>
                 <button onClick={sumar}>+</button>
                 <button onClick={restar}>-</button>
             </span>
             <p>{count}</p>
         </div>
-        <button className='itemCount__addCart' onClick={() => onAdd(count)}>Add to <TbShirt /></button>
+        <button className='_itemCount__addCartBttn' onClick={() => onAdd(count)}>Add to <TbShirt /></button>
     </div>
   )
 }

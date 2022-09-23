@@ -1,37 +1,31 @@
-.itemCount{
+.-itemCount{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    width: 8vw !important;
-    height: 20%;
+    width: 28% !important;
+    height: 21%;
     background: #e0e0e0;
     box-shadow: 15px 15px 30px #bebebe,
                 -15px -15px 30px #ffffff;
 }
-.itemCount__addCart{
-    border: none;
-    font-size: small;
-    font-weight: 700;
-    padding: 7px 15px;
-    border-top: 1px solid rgba(62, 62, 62, 0.364);
-    transition: 0.5s ease;
-    background-color: rgba(255, 255, 255, 0);
-    color: rgba(0, 0, 0, 0.904);
-}
-.itemCount__addCart:hover{
-    color: rgb(146, 146, 146);
-    transition: 0.5s ease;
-}
-.itemCount__div{
+._itemCount__bttnCtr{
     display: flex;
     flex-direction: row !important;
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-top: 0px;
+    margin: 0px !important;
 }
-.itemCount span{
+._itemCount__bttnCtr p{
+    text-align: center;
+    width: 50%;
+    padding: 0 !important;
+    color: rgba(0, 0, 0, 0.822) !important;
+}
+._bttnCrt-countCtr{
     display: flex;
     padding: 0 !important;
     flex-direction: column;
@@ -39,25 +33,34 @@
     width: 40px;
     margin: 10px 0 0 10px;
 }
-.itemCount span button:last-of-type{
+._bttnCrt-countCtr button:last-of-type{
     border-top: 1px solid rgba(62, 62, 62, 0.364);
     font-size: 3.5vh;
     background-color: rgba(0, 0, 0, 0);
 }
-.itemCount span button{
+._bttnCrt-countCtr button{
     border: none;
     font-size: 6vh;
     transition: 0.5s ease;
     font-size: 3.5vh;
     background-color: rgba(0, 0, 0, 0);
 }
-.itemCount span button:hover{
+._bttnCrt-countCtr button:hover{
     color: rgb(146, 146, 146);
     transition: 0.5s ease;
 }
-.itemCount__div p{
-    text-align: center;
-    width: 50%;
-    padding: 0 !important;
-    color: rgba(0, 0, 0, 0.822) !important;
+/* add to cart button */
+._itemCount__addCartBttn{
+    border: none;
+    font-size: small;
+    font-weight: 700;
+    padding: 4px 23px 0px 23px;
+    border-top: 1px solid rgba(62, 62, 62, 0.364);
+    transition: 0.5s ease;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(0, 0, 0, 0.904);
+}
+._itemCount__addCartBttn:hover{
+    color: rgb(146, 146, 146);
+    transition: 0.5s ease;
 }
