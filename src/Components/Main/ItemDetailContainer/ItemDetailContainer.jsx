@@ -1,19 +1,18 @@
-import React, { useEffect, useState} from 'react';
-import ItemDetail from './ItemDetail/ItemDetail';
-//import { Products } from '../../Mock/Products';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import ItemDetail from "./ItemDetail/ItemDetail";
+//import { Products } from "../../Mock/Products";
+import { useParams } from "react-router-dom";
 //Firebase
 import { dataBase } from '../../../FirebaseConfig/FirebaseConfig';
 import { getDoc, doc, collection } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
-  
   const [item, setItem] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const {id} = useParams();
+  const { id } = useParams();
 
-  useEffect(() =>{
-    setIsLoading(true)
+  useEffect(() => {
+        setIsLoading(true)
     const itemCollection = collection( dataBase, 'jerseys' );
     const ref = doc(itemCollection, id);
     getDoc(ref).then((res) => {
@@ -27,22 +26,17 @@ const ItemDetailContainer = () => {
     })
     .finally(() =>{
         setIsLoading(false);
-    })
-  },[id]);
+    }) 
+  }, [id]);
 
   return (
-      <div>
-        {
-          isLoading
-          ?   <div className='spinner'></div>
-          :   <ItemDetail item={item}/>
-        }
-      </div>
-  )
+    <>
+      {isLoading ? <div className="spinner"></div> : <ItemDetail item={item} />}
+    </>
+  );
 };
 
 export default ItemDetailContainer;
-
 
 /* const getProduct = () =>
 new Promise ((res, rej) => {
@@ -65,6 +59,24 @@ return(
       setIsLoading(true)
 ) */
 
+//UEFCT FIREBASE
+
+/* setIsLoading(true)
+const itemCollection = collection( dataBase, 'jerseys' );
+const ref = doc(itemCollection, id);
+getDoc(ref).then((res) => {
+  setItem({
+    id: res.id,
+    ...res.data()
+  });
+})
+.catch((error) =>{
+    console.log(error);
+})
+.finally(() =>{
+    setIsLoading(false);
+}) */
+
 //const id = useParams();
-  
+
 //const detailItem = Products.find((dItem) => dItem.id === id);

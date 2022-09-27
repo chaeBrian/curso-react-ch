@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import ItemList from './ItemList/ItemList';
-/* import { Products } from '../../Mock/Products'; */
+//import { Products } from '../../Mock/Products';
 import { useParams } from 'react-router-dom';
 //Stylesheet
 import './itemListContainer.css';
@@ -18,27 +18,27 @@ const ItemListContainer = (props) => {
 
   useEffect(() => {
     setIsLoading(true);
-    const itemCollection = collection( dataBase, 'jerseys' );
-    const ref = id
-        ? query(itemCollection, where('category', '==', id))
-        : itemCollection;
+        const itemCollection = collection( dataBase, 'jerseys' );
+        const ref = id
+            ? query(itemCollection, where('category', '==', id))
+            : itemCollection;
 
-    getDocs( ref )
-    .then((res) => {
-        const shirts = res.docs.map((shirt) => {
-            return {
-                id: shirt.id,
-                ...shirt.data()
-            };
-        });
-        setItems(shirts)
-    })
-    .catch((error) =>{
-        console.log(error);
-    })
-    .finally(() =>{
-        setIsLoading(false);
-    })
+        getDocs( ref )
+        .then((res) => {
+            const shirts = res.docs.map((shirt) => {
+                return {
+                    id: shirt.id,
+                    ...shirt.data()
+                };
+            });
+            setItems(shirts)
+        })
+        .catch((error) =>{
+            console.log(error);
+        })
+        .finally(() =>{
+            setIsLoading(false);
+        })
   }, [id]);
 
   return (
@@ -55,25 +55,54 @@ const ItemListContainer = (props) => {
   )
 };
 
-/* const getProducts = () =>
-new Promise((res, rej) => {
-const filterProd = Products.filter(
-    (prod) => prod.category === id);
-setTimeout(() => {
-    res(id ? filterProd : Products);
-}, 1000);
-});
-getProducts()
-.then((data) => {
-    setItems(data);
-    setIsLoading(false);
-})
-.catch((error) => {
-    console.log(error);
-});
-
-return(
-setIsLoading(true)
-) */
-
 export default ItemListContainer;
+
+/*
+
+    const getProducts = () =>
+    new Promise((res, rej) => {
+    const filterProd = Products.filter(
+        (prod) => prod.category === id);
+    setTimeout(() => {
+        res(id ? filterProd : Products);
+    }, 1000);
+    });
+    getProducts()
+    .then((data) => {
+        setItems(data);
+        setIsLoading(false);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+    
+    return(
+    setIsLoading(true)
+    ) 
+*/
+
+
+//UEFCT FIREBASE
+
+/* setIsLoading(true);
+const itemCollection = collection( dataBase, 'jerseys' );
+const ref = id
+    /*? query(itemCollection, where('category', '==', id))
+    : itemCollection;
+
+getDocs( ref )
+.then((res) => {
+    const shirts = res.docs.map((shirt) => {
+        return {
+            id: shirt.id,
+            ...shirt.data()
+        };
+    });
+    setItems(shirts)
+})
+.catch((error) =>{
+    console.log(error);
+})
+.finally(() =>{
+    setIsLoading(false);
+}) */

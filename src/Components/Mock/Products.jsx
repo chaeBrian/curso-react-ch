@@ -4,11 +4,11 @@ export const Products = [
         title: 'Germany Home',
         description: 'New | Men | Football',
         color: 'White',
-        discount: ' ',
+        discount: 'This product is excluded from all promotional discounts and offers.',
         price: 50,
         stock: 8,
         category: 'home-shirts',
-        img: 'https://res.cloudinary.com/dr2vstkz6/image/upload/v1661884336/id1_jersey_germany_ew7gqa.webp'
+        img: 'https://res.cloudinary.com/dr2vstkz6/image/upload/v1664142450/germany_home_2022_cv78br.webp'
   },
   {
     id: '2',

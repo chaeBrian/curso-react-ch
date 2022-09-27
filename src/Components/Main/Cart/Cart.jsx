@@ -1,12 +1,30 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import {CartContext} from '../../../Context/CartContext';
 import {TbShirtOff} from 'react-icons/tb'
 import { Link } from 'react-router-dom';
+import Form from '../../Form/Form';
 //Stylesheet
 import './Cart.css';
 
 const Cart = () => {
+    
+    const [buyId, setBuyId] = useState('');
     const { cart, clear, removeShirt, totalPrice } = useContext(CartContext);
+    const total = totalPrice();
+
+    const handleId = (id) =>{
+        setBuyId(id);
+    };
+
+    if (buyId) {
+        return (
+            <div className='-idCart'>
+                <h4 className='_idCart__title'>Thank you for shopping here.</h4>
+                <p className='_idCart__p'>Your purchase ID is: <span>{buyId}</span><br/>check your email for more information.</p>
+                <Link className='_emptyCartCtr__bttn'to='/'>Back to Store</Link>
+            </div>
+        )
+    };
 
     if (cart.length === 0) {
         return <div className='-emptyCartCtr'>
@@ -64,12 +82,10 @@ const Cart = () => {
                 </div>
               </div>
               <div className='_cartCtr__rightD'>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <p>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;
-                    {totalPrice()},00</p>
+                <h3>Payment Details</h3>
+                <Form cart={cart} total={total} clear={clear} handleId={handleId}/>
+                <h5>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;
+                    {totalPrice()},00</h5>
               </div>
           </div>
 

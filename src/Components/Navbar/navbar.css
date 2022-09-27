@@ -1,7 +1,7 @@
 .stylesNavbar{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     user-select: none;
 }
@@ -11,7 +11,6 @@
     text-align: center;
     text-decoration: none;
     transition: all 0.5s ease;
-    margin-left: 15rem;
 }
 .stylesNavbar__home:visited{
     color: black;
@@ -26,7 +25,7 @@
 .stylesNavbar ul{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     width: 60%;
 }
