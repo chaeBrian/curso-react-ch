@@ -4,7 +4,7 @@ import { TbShirtOff } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import Form from "../../Form/Form";
 //Stylesheet
-import "./Cart.css";
+import "./CartCss/Cart.css";
 
 const Cart = () => {
   const [buyId, setBuyId] = useState("");
