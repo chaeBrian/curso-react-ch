@@ -1,5 +1,6 @@
-.header{
+header{
     width: 100%;
-    border-bottom: 1px solid transparent;
-    border-image-slice: 1;
+    position: fixed;
+    background: #eceff1;
+    z-index: 999999;
 }

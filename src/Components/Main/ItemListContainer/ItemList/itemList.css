@@ -1,8 +1,26 @@
-.itemList{
+.main__div--container{
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    flex-wrap: wrap;
-    padding: 10px 0;
-    width: 90%;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 4rem;
+}
+.main__div--container h3{
+    font-weight: 800;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 1.5rem;
+    padding: 1rem;
+    user-select: none;
+}
+.main__div{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+@media screen and (max-width: 420px) {
+    .main__div--container h3{
+        padding: 1rem 0.5rem 1rem 0;
+    }
 }

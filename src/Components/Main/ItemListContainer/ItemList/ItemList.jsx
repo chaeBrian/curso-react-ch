@@ -1,18 +1,19 @@
-import React from 'react';
-import Item from './Item/Item';
+import React from "react";
+import Item from "./Item/Item";
 //Stylesheet
-import './itemList.css';
+import "./itemList.css";
 
-export const ItemList = ({items}) => {
+export const ItemList = ({ items }) => {
   return (
-    <div className='itemList'>
+    <div className="main__div--container">
+      <h3>SHIRTS</h3>
+      <div className="main__div">
         {items.map((item) => {
-            return (
-                <Item item={item} key={item.id}/>
-            );
+          return <Item item={item} key={item.id} />;
         })}
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default ItemList;

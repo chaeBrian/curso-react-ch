@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import ItemList from './ItemList/ItemList';
-//import { Products } from '../../Mock/Products';
+import ItemList from './ItemList/ItemList'
+import ClockApp from '../../Clock/ClockApp.jsx';
 import { useParams } from 'react-router-dom';
+//import { Products } from '../../Mock/Products';
 //Stylesheet
 import './itemListContainer.css';
 //Firebase
@@ -9,21 +10,21 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 import { dataBase } from '../../../FirebaseConfig/FirebaseConfig';
 
 const ItemListContainer = (props) => {
-  
+    
   const [items, setItems] = useState([]);
 
   const [isLoading, setIsLoading] = useState(true);
 
-  const {id} = useParams()
+  const {id} = useParams();
 
   useEffect(() => {
     setIsLoading(true);
-        const itemCollection = collection( dataBase, 'jerseys' );
-        const ref = id
-            ? query(itemCollection, where('category', '==', id))
-            : itemCollection;
+    const itemCollection = collection( dataBase, 'shirts' );
+    const ref = id
+        ? query(itemCollection, where('category', '==', id))
+        : itemCollection;
 
-        getDocs( ref )
+    getDocs( ref )
         .then((res) => {
             const shirts = res.docs.map((shirt) => {
                 return {
@@ -41,17 +42,21 @@ const ItemListContainer = (props) => {
         })
   }, [id]);
 
+
   return (
-    <div className='itemListContainer'>
+    <section className='main__section'>
+        <div className={props.cName}>
+            <h1 className='main__h1--section'>FOOTBALL WORLD CUP</h1>
+            <ClockApp />
+        </div>
         {
             isLoading
-            ?   <div className='spinner'></div>
+            ?   <div className='loader'></div>
             :   <>
-                    <div className='itemListContainer__saludo'>{props.saludo}</div>
                     <ItemList items={items}/>
                 </>
         }
-    </div>
+    </section>
   )
 };
 

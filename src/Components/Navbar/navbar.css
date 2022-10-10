@@ -1,52 +1,52 @@
-.stylesNavbar{
+.nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     user-select: none;
+    z-index: 99999;
 }
-.stylesNavbar__home{
-    color: black;
+.nav__link--modified{
+    margin: .5rem 2rem;
     font-weight: 700;
     text-align: center;
-    text-decoration: none;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
-.stylesNavbar__home:visited{
-    color: black;
+.nav__link--modified:hover{
+    color: chartreuse;
+    transition: all 0.2s ease;
 }
-.stylesNavbar__home:hover{
-    color: rgb(166, 166, 166);
-    transition: all 0.5s ease;
-}
-.stylesNavbar ul li a span{
-    padding: 0 5vw;
-}
-.stylesNavbar ul{
+.nav__ul{
+    padding: 0 2rem;
     display: flex;
     flex-direction: row;
-    justify-content: right;
     align-items: center;
-    width: 60%;
 }
-.stylesNavbar li{
-    list-style: none;
-    margin: 1vw;
-}
-.stylesNavbar__ul-link{
-    color: black;
+.nav__link{
+    padding: .5rem;
     font-weight: 600;
     text-decoration-line: none;
     transition: all 0.5s ease;
-    margin: 0 5px;
 }
-.stylesNavbar__ul-link:visited{
-    color: black;
-}
-.stylesNavbar__ul-link:hover{
+.nav__link:hover{
     color: #bebebe;
     transition: all 0.5s ease;
 }
-.stylesNavbar li:last-of-type{
-    height: 30px;
+
+@media screen and (max-width: 420px){
+    .nav{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .nav__ul{
+        padding: 0 .5rem;
+    }
+    .nav__link--modified{
+        margin: .3rem .6rem 0;
+        align-self: flex-start;
+        color: rgb(80, 160, 1);
+    }
+    .nav__link{
+        padding: 0rem .3rem .3rem;
+    }
 }

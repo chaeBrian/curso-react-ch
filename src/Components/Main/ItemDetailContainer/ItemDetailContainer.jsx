@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
         setIsLoading(true)
-    const itemCollection = collection( dataBase, 'jerseys' );
+    const itemCollection = collection( dataBase, 'shirts' );
     const ref = doc(itemCollection, id);
     getDoc(ref).then((res) => {
       setItem({
@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      {isLoading ? <div className="spinner"></div> : <ItemDetail item={item} />}
+      {isLoading ? <div className="loader"></div> : <ItemDetail item={item} />}
     </>
   );
 };

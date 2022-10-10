@@ -1,0 +1,119 @@
+.footer__div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    height: 300px;
+    color: rgb(215, 215, 215);
+}
+.footer__span{
+    position: absolute;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-style: italic;
+    margin: 0 1rem;
+    white-space: nowrap;
+    animation: move-left-to-right linear 90s infinite;
+}
+.footer__div span:nth-child(3){
+    bottom: 135px;
+    position: absolute;
+}
+.footer__div span:nth-child(4){
+    bottom: 80px;
+    position: absolute;
+    animation: move-right-to-left linear 200s infinite;
+}
+.footer__div span:nth-child(5){
+    bottom: 30px;
+    position: absolute;
+}
+@keyframes move-left-to-right {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.footer__span--modified{
+    position: absolute;
+    bottom: -50px;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-style: italic;
+    margin: 0 1rem;
+    animation: move-right-to-left linear 10s infinite;
+    position: relative;
+    white-space: nowrap;
+}
+@keyframes move-right-to-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+.footer__ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.footer__ul button{
+    border: none;
+    transition: .5s ease;
+}
+.footer__ul button:hover{
+    color: chartreuse;
+    transition: .5s ease;
+}
+.footer__ul li:nth-child(2){
+    margin-left: auto;
+}
+.footer__ul li:nth-child(3){
+    padding: 1rem;
+}
+.footer__barCode{
+    color: rgb(4, 4, 4);
+    transform: rotate(90deg);
+}
+.footer__li{
+    display: flex;
+    flex-direction: row;
+    line-height: 1;
+    user-select: none;
+}
+.footer__li span{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-weight: 800;
+    font-size: .7rem;
+}
+.footer__li--modified{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+}
+.footer__li--modified span{
+    padding: 0 0.4rem;
+    font-weight: 800;
+    font-size: .8rem;
+    user-select: none;
+}
+.footer__li--modified picture{
+    padding: 0.3rem;
+    transition: .5s ease;
+}
+.footer__li--modified picture:hover{
+    color: chartreuse;
+    transition: .5s ease;
+}

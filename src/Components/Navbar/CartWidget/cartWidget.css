@@ -1,16 +1,13 @@
-.cartWidget{
+.nav__cartWidget{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-top: -16px;
+    align-items: center;
 }
-.cartWidget span{
-    padding: 0 !important;
-    font-size: large;
-    margin-left: 0;
+.nav__cartIcon{
+    margin: auto;
 }
-.cartWidget p{
-    font-size: normal;
-    font-weight: 500;
-    margin-top: -1px;
+.nav__cartWidget span{
+    font-size: .8rem;
+    font-weight: 800;
+    text-align: center;
 }

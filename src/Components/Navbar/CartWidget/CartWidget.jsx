@@ -7,9 +7,11 @@ const CartWidget = () => {
     const { unitsInCart } = useContext(CartContext);
 
     return (
-        <div className='cartWidget'>
-            <span><TbShirt />&nbsp;</span>
-            <p>{unitsInCart() === 0 ? ' ' : unitsInCart()}</p>
+        <div className='nav__cartWidget'>
+            <picture>
+                <TbShirt className='nav__cartIcon'/>
+            </picture>
+            <span>{unitsInCart() === 0 ? ' ' : unitsInCart()}</span>
         </div>
     )
 };

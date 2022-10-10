@@ -1,28 +1,80 @@
-.itemListContainer{
+.main__section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 96%;
+    width: 97%;
+    margin: 1rem auto;
 }
-.itemListContainer__saludo{
-    padding: 2vh;
-    font-size: 2vh;
-    font-weight: 700;
+.main__h1--section{
+    font-weight: 800;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
 }
-.spinner{
-    height: 100px;
-    width: 100px;
-    background-image: url(
-        https://res.cloudinary.com/dr2vstkz6/image/upload/v1663266485/qatar-png_blvhcp.webp
-        );
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 200px;
-    animation: fade 3s ease infinite;
+.main__div--section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 6rem 0rem 5rem;
+    user-select: none;
 }
-  
-@keyframes fade {
-    0%,100% {opacity: 0.3;}
-    50% {opacity: 1;}
+.loader {
+    border: 4px solid rgba(0, 0, 0, .1);
+    border-left-color: transparent;
+    border-radius: 50%;
+    margin: 15rem 0;
+}
+.loader {
+    border: 4px solid rgba(0, 0, 0, .1);
+    border-left-color: transparent;
+    width: 36px;
+    height: 36px;
+}
+
+.loader {
+    border: 4px solid rgba(0, 0, 0, .1);
+    border-left-color: transparent;
+    width: 36px;
+    height: 36px;
+    animation: spin89345 1s linear infinite;
+}
+
+@keyframes spin89345 {
+    0% {
+    transform: rotate(0deg);
+    }
+
+    100% {
+    transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .main__div--section{
+        padding: 3.5rem 0 5rem;
+    }
+    .main__h1--section{
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width: 420px) {
+    .main__div--section{
+        padding: 5rem 0 1rem;
+    }
+    .main__div--section{
+        flex-direction: column;
+    }
+    .main__h1--section{
+        font-weight: 800;
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        font-size: 4vw;
+        margin-left: 10vw;
+    }
+}
+@media screen and (max-width: 240px) {
+    .main__h1--section{
+        font-size: 5vw;
+    }
 }

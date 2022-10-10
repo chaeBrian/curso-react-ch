@@ -5,15 +5,15 @@ import './item.css';
 
 export const Item = ({item}) => {
   return (
-    <Link className='item' to={`/detail/${item.id}`}>
-          <img src={item.img} alt="Football Jersey"/>
-          <div>
-              <p>{item.title}</p>
-              <span>${item.price}</span>
+    <Link className='main__item' to={`/detail/${item.id}`}>
+          <picture>
+            <img src={item.img} alt="Football Jersey"/>
+          </picture>
+          <div className='main__div--div'>
+            <span className='main__span--div'>{item.title}</span>
+            <span className='main__span--div'>{item.deets}</span>
+            <span className='main__span--div'>${item.price},00</span>
           </div>
-          <span className='item__span'>{item.description}</span>
-          <span className='item__span'>{item.category}</span>
-          <span className='item__span'>Stock: {item.stock}</span>
     </Link>
   )
 }

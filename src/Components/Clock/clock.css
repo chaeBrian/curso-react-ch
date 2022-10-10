@@ -1,0 +1,100 @@
+.clock__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    line-height: .7;
+}
+.clock__days{
+    color: rgb(42, 42, 42);
+    background-image: 
+    linear-gradient(transparent 40%, rgb(174, 174, 174) 20%, transparent);
+    background-size: 1px;
+    background-repeat: none;
+    padding: 1rem;
+}
+.clock__days, .clock__min, .clock__sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.clock__days span:first-child{
+    font-size: 26rem;
+    font-weight: 800;
+}
+.clock__days span:last-child{
+    font-weight: 800;
+    font-size: 13rem;
+}
+.clock__hours{
+    color: rgb(95, 95, 95);
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.clock__hours span:first-child{
+    font-weight: 800;
+    font-size: 15rem;
+    line-height: .8;
+}
+.clock__hours span:last-child{
+    font-weight: 800;
+    font-size: 5rem;
+    align-self: center;
+    line-height: .8;
+    /* 
+    writing-mode: vertical-rl;
+    transform: rotate(180deg); */
+}
+.clock__min{
+    color: chartreuse;
+}
+.clock__container--second{
+    color: rgb(207, 207, 207);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0;
+}
+.clock__container--third{
+    display: flex;
+    flex-direction: row;
+    font-weight: 800;
+    font-size: 5.5rem;
+    line-height: .8;
+}
+.clock__container--third span{
+    text-align: center;
+}
+.clock__container--third span:last-child{
+    font-size: 4rem;
+}
+.hidden{
+    display: none;
+}
+
+@media screen and (max-width: 930px) {
+    .clock__days span:first-child{
+        font-size: 42vw;
+    }
+    .clock__days span:last-child{
+        font-size: 22vw;
+    }
+    .clock__hours span:first-child{
+        font-size: 24vw;
+    }
+    .clock__hours span:last-child{
+        font-size: 9vw;
+    }
+    .clock__container--third{
+        font-size: 10vw;
+    }
+    .clock__container--third span:last-child{
+        font-size: 8vw;
+    }
+}
+@media screen and (max-width: 420px) {
+   .clock__min{
+    color: rgb(80, 160, 1);
+   } 
+}

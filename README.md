@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# **CoderHouse Course - React | Comision 37080**
+## E-commerce final project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ - *HTML | CSS | React | Responsive*
 
-## Available Scripts
+ Acerca de mi proyecto, como bien saben este año el mundial de futbol se hace presente por ende se me ocurrio hacer un e-commerce mostrando todas las camisetas que se vestiran este año en este gran evento, cree tres categorias diviendo las camisetas locales(home), las visitantes(away) y las camisetas de arquero(goalkeeper), cada una con un detalle en la que se muestra la marca que la diseño, el logo futbolistico del pais ademas de otras cosas.
+ Mi proyecto como cualqueir e-commerce posee un carrito el cual tiene un enlace tanto en el navbar, como en el detalle del producto.
+ La compra de productos se ejecuta con 3 datos que se le solicitan al usuario, a traves de esto el usuario recibe un id de compra unico.
 
-In the project directory, you can run:
+ Ademas de los componentes que se solicitaban en la entrega, utilice otros para el dinamismo de la web.
 
-### `npm start`
+ #### **Lista de Componentes ajenos a los solicitados**:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ - Clock: Countdown, el cual hace referencia a la cantidad de dias que faltan para que comience el mundial de futbol.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ - ScrollToTop: Este componente es como su nombre lo dice un scroll to top, lo utilice en las rutas, ya que cada vez que queria ver el detalle de una camiseta, el scroll se congelaba en esa posicion, por ende debia utilizar scroll manualmente para posicionarme donde era debido.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+###  **Librerias en uso**
 
-### `npm run build`
+- [React Router Dom](https://reactrouter.com/en/main)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    `npm install react-router-dom`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    *Libreria utilizada para crear las rutas en mi aplicacion*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Firebase](https://firebase.google.com/?hl=es)
 
-### `npm run eject`
+    `npm install --save firebase`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    *Utilizada para una base de datos especifica de cada compra que se realiza en la aplicacion, de esta forma dispongo de la informacion que le solicito al usuario ademas de lo que se solicita comprar*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    *utilizada tambien para generar una base de datos de los productos que quiero mostrar en el e-commerce*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [react-icons](https://react-icons.github.io/react-icons)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    `npm install react-icons --save`
 
-## Learn More
+    *Todos los icons de mi e-commerce pertenecen a a esta libreria*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **Preview**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![](https://res.cloudinary.com/dr2vstkz6/image/upload/v1665435235/Captura_de_pantalla_2022-10-10_175327_atmlu9.png)
 
-### Code Splitting
+-
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### **Levantar el proyecto en local**
 
-### Analyzing the Bundle Size
+```
+git clone https://github.com/chaeBrian/react-ch.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`npm install`
 
-### Making a Progressive Web App
+`npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

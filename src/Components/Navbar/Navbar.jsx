@@ -6,31 +6,31 @@ import './navbar.css';
 
 const Navbar = () => {
   return (
-    <div className='stylesNavbar'>
-        <Link className='stylesNavbar__home' to='/'>WORLD CUP SHIRTS</Link>
-        <ul>
+    <nav className='nav'>
+        <Link className='nav__link--modified' to='/'>f w c</Link>
+        <ul className='nav__ul'>
             <li>
-              <Link className='stylesNavbar__ul-link' to='/category/home-shirts'>
-                home shirts
+              <Link className='nav__link' to='/category/home-shirts'>
+                home
                 </Link>
               </li>
             <li>
-              <Link className='stylesNavbar__ul-link' to='/category/away-shirts'>
-                away shirts
+              <Link className='nav__link' to='/category/away-shirts'>
+                away
                 </Link>
               </li>
             <li>
-              <Link className='stylesNavbar__ul-link' to='/category/goalkeeper-shirts'>
-                goalkeeper shirts
+              <Link className='nav__link' to='/category/goalkeeper-shirts'>
+                goalkeeper
                 </Link>
               </li>
             <li>
-              <Link className='stylesNavbar__ul-link' to='/cart'>
+              <Link className='nav__link' to='/cart'>
                 <CartWidget />
                 </Link>
               </li>
         </ul>
-    </div>
+    </nav>
   )
 }
 
