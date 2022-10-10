@@ -6,7 +6,6 @@ import CartProvider from "./Context/CartContext"
 import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
-    console.log(process.env)
     return (
         <CartProvider>
             <BrowserRouter>

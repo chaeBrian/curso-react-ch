@@ -6,7 +6,7 @@ import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer';
 import Cart from './Cart/Cart'
 import ScrollToTop from '../SrollToTop/ScrollToTop';
 //Stylesheet
-import './Main.css';
+import './MainCss/Main.css';
 
 const Main = () => {
   return (
