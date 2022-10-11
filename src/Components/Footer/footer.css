@@ -71,9 +71,15 @@
     border: none;
     transition: .5s ease;
 }
-.footer__ul button:hover{
-    color: chartreuse;
-    transition: .5s ease;
+@media(hover: hover) and (pointer: fine){
+    .footer__ul button:hover{
+        color: chartreuse;
+        transition: .5s ease;
+    }
+    .footer__li--modified picture:hover{
+        color: chartreuse;
+        transition: .5s ease;
+    }
 }
 .footer__ul li:nth-child(2){
     margin-left: auto;
@@ -116,10 +122,6 @@
     transition: .5s ease;
     margin-right: auto;
     align-self: left;
-}
-.footer__li--modified picture:hover{
-    color: chartreuse;
-    transition: .5s ease;
 }
 
 @media screen and (max-width: 420px) {

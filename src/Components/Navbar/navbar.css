@@ -11,10 +11,17 @@
     font-weight: 700;
     text-align: center;
     transition: all 0.2s ease;
+    letter-spacing: -1.5px;
 }
-.nav__link--modified:hover{
-    color: chartreuse;
-    transition: all 0.2s ease;
+@media (hover: hover) and (pointer: fine) {
+    .nav__link--modified:hover{
+        color: chartreuse;
+        transition: all 0.2s ease;
+    }
+    .nav__link:hover{
+        color: #bebebe;
+        transition: all 0.5s ease;
+    }
 }
 .nav__ul{
     padding: 0 2rem;
@@ -26,16 +33,11 @@
     padding: .5rem;
     font-weight: 600;
     text-decoration-line: none;
-    transition: all 0.5s ease;
-}
-.nav__link:hover{
-    color: #bebebe;
-    transition: all 0.5s ease;
 }
 
 @media screen and (max-width: 420px){
     .nav{
-        flex-direction: column;
+        flex-direction: row;
     }
     .nav__ul{
         padding: 0 .5rem;
@@ -46,21 +48,14 @@
     .nav__link--modified{
         margin: .3rem .6rem 0;
         align-self: flex-start;
-        color: rgb(80, 160, 1);
+        color: chartreuse;
     }
     .nav__link{
-        padding: 0rem .3rem .3rem;
+        padding: 0;
+        margin: 0 .3rem;
     }
     .nav__link:hover{
         color: inherit;
-        transition: none;
-    }
-    .nav__link--modified:active{
-        background-color: none;
-        color: rgb(80, 160, 1);
-    }
-    .nav__link--modified:hover{
-        color: rgb(80, 160, 1);
         transition: none;
     }
 }

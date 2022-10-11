@@ -73,29 +73,50 @@
     transition: all 0.2s ease;
     box-shadow: 2px 2px 5px 1px rgb(209, 209, 209);
 }
-.sectionCart__bttn--modified:hover{
-    color: rgb(242, 242, 242);
-    box-shadow: 2px 2px 5px 1px rgb(180, 180, 180);
-    background-image: linear-gradient(to right,
-     rgb(250, 82, 82),
-      rgb(250, 82, 82) 16.65%,
-       rgb(190, 75, 219) 16.65%,
-        rgb(190, 75, 219) 33.3%,
-         rgb(76, 110, 245) 33.3%,
-          rgb(76, 110, 245) 49.95%,
-           rgb(64, 192, 87) 49.95%,
-            rgb(64, 192, 87) 66.6%,
-             rgb(250, 176, 5) 66.6%,
-              rgb(250, 176, 5) 83.25%,
-               rgb(253, 126, 20) 83.25%,
-                rgb(253, 126, 20) 100%,
-                 rgb(250, 82, 82) 100%);
-    animation: var(--timing) linear emptyCartButton infinite;
-    transform: scale(1.1) translateY(-1px);
-}
-@keyframes emptyCartButton {
-    to {
-      background-position: var(--width);
+@media (hover: hover) and (pointer: fine) {
+    .sectionCart__bttn--modified:hover{
+        color: rgb(242, 242, 242);
+        box-shadow: 2px 2px 5px 1px rgb(180, 180, 180);
+        background-image: linear-gradient(to right,
+         rgb(250, 82, 82),
+          rgb(250, 82, 82) 16.65%,
+           rgb(190, 75, 219) 16.65%,
+            rgb(190, 75, 219) 33.3%,
+             rgb(76, 110, 245) 33.3%,
+              rgb(76, 110, 245) 49.95%,
+               rgb(64, 192, 87) 49.95%,
+                rgb(64, 192, 87) 66.6%,
+                 rgb(250, 176, 5) 66.6%,
+                  rgb(250, 176, 5) 83.25%,
+                   rgb(253, 126, 20) 83.25%,
+                    rgb(253, 126, 20) 100%,
+                     rgb(250, 82, 82) 100%);
+        animation: var(--timing) linear emptyCartButton infinite;
+        transform: scale(1.1) translateY(-1px);
+    }
+    @keyframes emptyCartButton {
+        to {
+          background-position: var(--width);
+        }
+    }
+   
+    .sectionCart__button--div:hover {
+        background: #ff1616;
+    }
+    .sectionCart__button--div:hover .sectionCart__text--button {
+        color: transparent;
+    }
+    .sectionCart__button--div:hover .sectionCart__icon--button {
+        width: 85px;
+        border-left: none;
+        transform: translateX(11px);
+    }
+    .sectionCart__button--div:active .sectionCart__icon--button svg {
+        transform: scale(0.8);
+    }
+    .sectionCart__itemDeetsCtr button:hover{
+        color: rgb(255, 28, 28);
+        transition: all 0.4s ease;
     }
 }
 
@@ -167,23 +188,8 @@
     width: .7rem;
     fill: #eee;
 }
-   
-.sectionCart__button--div:hover {
-    background: #ff1616;
-}
-.sectionCart__button--div:hover .sectionCart__text--button {
-    color: transparent;
-}
-.sectionCart__button--div:hover .sectionCart__icon--button {
-    width: 85px;
-    border-left: none;
-    transform: translateX(11px);
-}
 .sectionCart__button--div:focus {
     outline: none;
-}
-.sectionCart__button--div:active .sectionCart__icon--button svg {
-    transform: scale(0.8);
 }
 /* bot */
 .sectionCart__div--modified{
@@ -220,10 +226,6 @@
     align-self: flex-end;
     border: none;
     color: rgb(255, 119, 119);
-    transition: all 0.4s ease;
-}
-.sectionCart__itemDeetsCtr button:hover{
-    color: rgb(255, 28, 28);
     transition: all 0.4s ease;
 }
 .sectionCart__itemDeets{

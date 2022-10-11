@@ -19,12 +19,16 @@
         opacity: 1;
     }
 }
-.main__item:hover{
-    cursor: pointer;
-    color: rgb(44, 44, 44);
-    transition: .3s ease;
-    box-shadow: 2px 2px 5px 1px rgba(100, 100, 100, 0.291);
+
+@media (hover: hover) and (pointer: fine) {
+    .main__item:hover{
+        cursor: pointer;
+        color: rgb(44, 44, 44);
+        transition: .3s ease;
+        box-shadow: 2px 2px 5px 1px rgba(100, 100, 100, 0.291);
+    }
 }
+
 .main__div--div{
     width: 100%;
     display: flex;

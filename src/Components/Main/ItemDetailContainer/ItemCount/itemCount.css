@@ -36,9 +36,15 @@
 .counter__bttn button:last-of-type{
     border-top: 1px solid rgba(62, 62, 62, 0.364);
 }
-.counter__bttn button:hover{
-    color: rgb(146, 146, 146);
-    transition: 0.5s ease;
+@media (hover: hover) and (pointer: fine) {
+    .counter__bttn button:hover{
+        color: rgb(146, 146, 146);
+        transition: 0.5s ease;
+    }
+    .counter__bttn--modified:hover{
+        color: rgb(0, 0, 0);
+        transition: 0.5s ease;
+    }
 }
 /* add to cart button */
 .counter__bttn--modified{
@@ -57,10 +63,6 @@
 }
 .counter__bttn--modified picture{
     width: 1rem;
-}
-.counter__bttn--modified:hover{
-    color: rgb(0, 0, 0);
-    transition: 0.5s ease;
 }
 
 @media screen and (max-width: 652px) {
