@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {addDoc, collection, serverTimestamp} from 'firebase/firestore';
 import './form.css';
-import { dataBase } from '../../FirebaseConfig/FirebaseConfig';
+import { dataBase } from '../Main/FirebaseConfig/FirebaseConfig.jsx';
 
 const Form = ({cart, total, clear, handleId}) => {
 
