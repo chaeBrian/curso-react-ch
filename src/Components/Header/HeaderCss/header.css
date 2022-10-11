@@ -3,4 +3,5 @@ header{
     position: fixed;
     background: #eceff1;
     z-index: 999999;
+    padding: .2rem 0;
 }
