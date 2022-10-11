@@ -65,6 +65,7 @@
 .footer__ul{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 .footer__ul button{
@@ -85,19 +86,17 @@
         transition: .5s ease;
     }
 }
-.footer__ul li:nth-child(2){
-    margin-left: auto;
-    padding: 1rem;
-}
 .footer__barCode{
     color: rgb(4, 4, 4);
     transform: rotate(90deg);
+    width: 80px;
 }
 .footer__li{
     display: flex;
     flex-direction: row;
     line-height: 1;
     user-select: none;
+    padding: 1rem;
 }
 .footer__li span{
     writing-mode: vertical-lr;
@@ -128,7 +127,7 @@
     .footer__li--modified{
         padding: .5rem;
     }
-    .footer__ul li:nth-child(2){
+    .footer__li{
         padding: .5rem;
         font-size: .8rem;
     }
