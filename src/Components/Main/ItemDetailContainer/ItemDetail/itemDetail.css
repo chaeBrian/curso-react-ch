@@ -158,14 +158,13 @@
     }
     .sectionDetail__div h3{
         font-size: 2rem;
-        padding: 1rem 0 0;
     }
     .sectionDetail__span{
         line-height: 1.1;
         font-size: .8rem;
         font-weight: 600;
         color: rgb(60, 60, 60);
-        padding: 1rem 0 .5rem;
+        padding: .5rem 0;
     }
     .sectionDetail__picture{
         align-self: center;
