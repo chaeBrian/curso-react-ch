@@ -71,6 +71,10 @@
     border: none;
     transition: .5s ease;
 }
+.footer__ul button picture{
+    width: 30px;
+    margin-right: auto;
+}
 @media(hover: hover) and (pointer: fine){
     .footer__ul button:hover{
         color: chartreuse;
@@ -83,8 +87,6 @@
 }
 .footer__ul li:nth-child(2){
     margin-left: auto;
-}
-.footer__ul li:nth-child(3){
     padding: 1rem;
 }
 .footer__barCode{
@@ -106,8 +108,6 @@
 .footer__li--modified{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-right: auto;
     padding: 1rem;
 }
 .footer__li--modified span{
@@ -118,17 +118,17 @@
     margin-right: auto;
 }
 .footer__li--modified picture{
-    padding: 0.3rem;
+    width: 30px;
+    padding: 0.2rem;
     transition: .5s ease;
     margin-right: auto;
-    align-self: left;
 }
 
 @media screen and (max-width: 420px) {
     .footer__li--modified{
         padding: .5rem;
     }
-    .footer__ul li:nth-child(3){
+    .footer__ul li:nth-child(2){
         padding: .5rem;
         font-size: .8rem;
     }

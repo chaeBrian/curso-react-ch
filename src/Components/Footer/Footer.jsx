@@ -35,6 +35,11 @@ const Footer = () => {
       </div>
       <ul className="footer__ul">
         <li className="footer__li--modified">
+          <button onClick={scrollToTop}>
+            <picture>
+              <BiArrowToTop size='30px'/>
+            </picture>
+          </button>
           <a href="https://github.com/chaeBrian" target="_blank" rel="noopener noreferrer">
             <picture >
               <VscGithubInverted size='25px'/>
@@ -46,13 +51,6 @@ const Footer = () => {
             </picture>
           </a>
           <span>Brian M. Ibañez</span>
-        </li>
-        <li>
-          <button onClick={scrollToTop}>
-            <picture>
-              <BiArrowToTop size='30px'/>
-            </picture>
-          </button>
         </li>
         <li className="footer__li">
           <picture className="footer__barCode">
