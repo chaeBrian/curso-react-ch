@@ -6,11 +6,8 @@
 }
 .clock__days{
     color: rgb(42, 42, 42);
-    background-image: 
-    linear-gradient(transparent 40%, rgb(174, 174, 174) 20%, transparent);
-    background-size: 1px;
-    background-repeat: none;
     padding: 1rem;
+    line-height: .8;
 }
 .clock__days, .clock__min, .clock__sec{
     display: flex;
@@ -21,6 +18,8 @@
 .clock__days span:first-child{
     font-size: 26rem;
     font-weight: 800;
+    background-color: chartreuse;
+    padding: .5rem 0 1rem;
 }
 .clock__days span:last-child{
     font-weight: 800;
@@ -95,6 +94,6 @@
 }
 @media screen and (max-width: 420px) {
    .clock__min{
-    color: rgb(80, 160, 1);
+    color: chartreuse;
    } 
 }

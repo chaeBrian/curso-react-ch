@@ -180,6 +180,9 @@
 @media screen and (max-width: 652px) {
     .sectionDetail{
         flex-direction: column;
+        margin-top: 5rem;
+        margin-bottom: 0;
+        padding: 1rem 0;
     }
     .sectionDetail__logo{
         display: none;

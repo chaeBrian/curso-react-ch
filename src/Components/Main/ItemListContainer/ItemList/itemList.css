@@ -24,3 +24,15 @@
         padding: 1rem 0.5rem 1rem 0;
     }
 }
+
+@media screen and (max-width: 880px) {
+    .main__div--container{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .main__div--container{
+        margin-top: 2rem;
+    }
+}

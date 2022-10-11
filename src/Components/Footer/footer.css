@@ -101,6 +101,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-right: auto;
     padding: 1rem;
 }
 .footer__li--modified span{
@@ -108,12 +109,28 @@
     font-weight: 800;
     font-size: .8rem;
     user-select: none;
+    margin-right: auto;
 }
 .footer__li--modified picture{
     padding: 0.3rem;
     transition: .5s ease;
+    margin-right: auto;
+    align-self: left;
 }
 .footer__li--modified picture:hover{
     color: chartreuse;
     transition: .5s ease;
+}
+
+@media screen and (max-width: 420px) {
+    .footer__li--modified{
+        padding: .5rem;
+    }
+    .footer__ul li:nth-child(3){
+        padding: .5rem;
+        font-size: .8rem;
+    }
+    .footer__li--modified span{
+        font-size: .7rem;
+    }
 }

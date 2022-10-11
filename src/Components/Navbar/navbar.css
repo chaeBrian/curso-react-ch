@@ -36,10 +36,12 @@
 @media screen and (max-width: 420px){
     .nav{
         flex-direction: column;
-        align-items: flex-end;
     }
     .nav__ul{
         padding: 0 .5rem;
+        align-self: flex-end;
+        margin-left: auto;
+        font-size: .8rem;
     }
     .nav__link--modified{
         margin: .3rem .6rem 0;
@@ -48,5 +50,17 @@
     }
     .nav__link{
         padding: 0rem .3rem .3rem;
+    }
+    .nav__link:hover{
+        color: inherit;
+        transition: none;
+    }
+    .nav__link--modified:active{
+        background-color: none;
+        color: rgb(80, 160, 1);
+    }
+    .nav__link--modified:hover{
+        color: rgb(80, 160, 1);
+        transition: none;
     }
 }
