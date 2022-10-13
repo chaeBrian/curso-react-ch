@@ -1,7 +1,7 @@
 # **CoderHouse Course - React | Comision 37080**
 ## E-commerce final project
 
- - *HTML | CSS | React | Responsive* | **[Deployment](https://react-ch-rust.vercel.app/)**
+ - *HTML | CSS | React | Responsive* | **[Deployment](https://fwcshirts.vercel.app/)**
 
  Acerca de mi proyecto, como bien saben este año el mundial de futbol se hace presente por ende se me ocurrio hacer un e-commerce mostrando todas las camisetas que se vestiran este año en este gran evento, cree tres categorias diviendo las camisetas locales(home), las visitantes(away) y las camisetas de arquero(goalkeeper), cada una con un detalle en la que se muestra la marca que la diseño, el logo futbolistico del pais ademas de otras cosas.
  Mi proyecto como cualqueir e-commerce posee un carrito el cual tiene un enlace tanto en el navbar, como en el detalle del producto.
