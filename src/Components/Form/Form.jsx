@@ -40,17 +40,17 @@ const Form = ({cart, total, clear, handleId}) => {
 
   return (
     <form className='form' action='' onSubmit={handleSubmit}>
-        <span className='form__span'>Name*</span>
+        <label className='form__span'>Name*</label>
         <input type="text" 
                 name="name" 
                 value={userName} onChange={handleChangeUserName} required>
         </input>
-        <span className='form__span'>Phone Number*</span>
+        <label className='form__span'>Phone Number*</label>
         <input type="tel"
                 name="phone" 
                 value={phone} onChange={handleChangePhone} required>
         </input>
-        <span className='form__span'>Mail*</span>
+        <label className='form__span'>Mail*</label>
         <input type="mail"
                 name="mail"
                 value={mail} onChange={handleChangeMail} required>
