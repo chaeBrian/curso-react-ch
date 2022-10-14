@@ -1,3 +1,6 @@
+.active{
+    color: chartreuse;
+}
 .nav{
     display: flex;
     flex-direction: row;
@@ -12,16 +15,6 @@
     text-align: center;
     transition: all 0.2s ease;
     letter-spacing: -1.5px;
-}
-@media (hover: hover) and (pointer: fine) {
-    .nav__link--modified:hover{
-        color: chartreuse;
-        transition: all 0.2s ease;
-    }
-    .nav__link:hover{
-        color: #bebebe;
-        transition: all 0.5s ease;
-    }
 }
 .nav__ul{
     padding: 0 2rem;
@@ -48,7 +41,6 @@
     .nav__link--modified{
         margin: 0 .6rem;
         align-self: flex-start;
-        color: chartreuse;
     }
     .nav__link{
         padding: 0;

@@ -8,6 +8,7 @@
     transition: .3s ease;
     padding: 1rem .5rem;
     border-radius: .5rem;
+    color: rgb(130, 130, 130);
 }
 @keyframes slideUp {
     0%, 5% {
@@ -53,6 +54,7 @@
     .main__item{
         width: 10rem;
         padding: 1rem 0;
+        color: inherit;
     }
     .main__span--div:nth-child(1){
         font-size: .8rem;
