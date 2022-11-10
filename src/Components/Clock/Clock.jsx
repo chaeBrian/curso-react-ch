@@ -5,7 +5,7 @@ const Clock = ({ timerDays, timerHours, timerMinutes, timerSeconds }) => {
     <Fragment>
       <section className="clock__container">
         <div className="clock__days">
-          <span>{timerDays}</span>
+          <span>0{timerDays}</span>
           <span>days</span>
         </div>
         <div className="clock__container--second">
