@@ -16,7 +16,7 @@
     align-items: center;
 }
 .clock__days span:first-child{
-    font-size: 26rem;
+    font-size: 21rem;
     font-weight: 800;
     background-color: chartreuse;
     padding: .5rem 0 1rem;

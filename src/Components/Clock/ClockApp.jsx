@@ -11,7 +11,7 @@ function ClockApp() {
   let interval;
 
   const startTimer = () => {
-    const countDownDate = new Date("Nov 20, 2022 ").getTime();
+    const countDownDate = new Date("Jun 8, 2026").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
